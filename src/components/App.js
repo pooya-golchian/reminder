@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <div className="">
         <div className="">
-          Reminder Pro
+          Reminder & Event
         </div>
         <div className="">
           <div className="">
