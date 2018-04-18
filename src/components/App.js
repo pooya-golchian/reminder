@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from './../actions';
 import moment from 'moment';
+import '../App.css'
 
 class App extends Component {
   constructor(props) {
@@ -49,8 +50,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="">
-        <div className="">
+     <div className="reminder">
+ <div className="reminder__container">
+        <div className="reminder__header">
           Reminder & Event
         </div>
         <div className="">
@@ -82,6 +84,7 @@ class App extends Component {
           Clear Reminders
         </div>
       </div>
+     </div>
     )
   }
 }
