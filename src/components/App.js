@@ -32,7 +32,7 @@ class App extends Component {
               <li key={reminder.id}>
                 <div className="reminder__list__item">
                   <div className="reminder__list__item--text">{reminder.text}</div>
-                  <div className="reminder__list__item--date"><em>{moment(new Date(reminder.dueDate)).fromNow()}</em></div>
+                  <div className="reminder__list__item--date">{moment(new Date(reminder.dueDate)).fromNow()}</div>
                 </div>
                 <div
                   className="reminder__list__item--delete"

@@ -64,12 +64,12 @@ button {
             flex: 1;
             flex-direction: column;
             &--input {
-                text-indent: .5em;
+                text-indent: 1em;
             }
             &--date {}
             &--btn {
                 background: #110b6d;
-                ;
+                margin-bottom: 1em;
                 color: white;
                 border: 1px solid #110b6d;
                 &:hover {
@@ -95,8 +95,7 @@ button {
         width: 100%;
         flex-direction: column;
         li {
-            margin: 1em auto;
-
+            margin: .5em auto;
             list-style: none;
             display: flex;
             flex: 1;
@@ -115,7 +114,10 @@ button {
             &--text {
                 font-size: 1em;
             }
-            &--date {}
+            &--date {
+                font-size: .8em;
+
+            }
             &--delete {
                 display: flex;
                 flex-direction: column;
@@ -124,7 +126,15 @@ button {
                 flex: 1;
                 cursor: pointer;
                 align-items: center;
+                font-size: .8em;
+                padding-top: .5em;
             }
         }
     }
 }
+
+
+
+
+
+
