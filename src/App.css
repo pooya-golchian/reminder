@@ -1,10 +1,14 @@
+* {
+  font-family: 'IBM Plex Serif', serif; }
+
 body {
   display: flex;
   padding: 0;
   margin: 0 auto;
   background: #f1f1f1;
   flex: 1;
-  justify-content: center; }
+  justify-content: center;
+  font-family: 'IBM Plex Serif', serif; }
 
 input {
   display: flex;
@@ -13,7 +17,6 @@ input {
   margin-bottom: 1em;
   border: 1px solid #ddd;
   padding: .5em 0 .5em 0;
-  border-radius: 0.5em;
   text-indent: .5em; }
 
 button {
@@ -24,8 +27,7 @@ button {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  border-radius: 0.5em; }
+  margin: 0 auto; }
 
 .reminder {
   display: flex;
@@ -43,4 +45,61 @@ button {
     align-self: center; }
   .reminder__header {
     font-size: 2.5em;
-    margin-bottom: .4em; }
+    margin-bottom: .4em;
+    font-family: 'IBM Plex Serif', serif; }
+  .reminder__form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%; }
+    .reminder__form__item {
+      display: flex;
+      flex: 1;
+      flex-direction: column; }
+      .reminder__form__item--input {
+        text-indent: .5em; }
+      .reminder__form__item--btn {
+        background: #110b6d;
+        color: white;
+        border: 1px solid #110b6d; }
+        .reminder__form__item--btn:hover {
+          background: white;
+          color: black;
+          border: 1px solid #110b6d; }
+      .reminder__form__item--btn-clear {
+        margin-top: 1em;
+        border: 1px solid #db5a5a;
+        background: #db5a5a;
+        color: white; }
+  .reminder__list {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column; }
+    .reminder__list li {
+      margin: 1em auto;
+      list-style: none;
+      display: flex;
+      flex: 1;
+      background: white;
+      border: 1px solid #777777;
+      width: 100%; }
+    .reminder__list__item {
+      display: flex;
+      flex: 10;
+      flex-direction: column;
+      flex-wrap: wrap;
+      cursor: default;
+      padding: 1em; }
+      .reminder__list__item--text {
+        font-size: 1em; }
+      .reminder__list__item--delete {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-self: flex-start;
+        flex: 1;
+        cursor: pointer;
+        align-items: center; }

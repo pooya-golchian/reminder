@@ -25,17 +25,17 @@ class App extends Component {
   renderReminders() {
     const { reminders } = this.props;
     return (
-      <ul className="">
+      <ul className="reminder__list">
         {
           reminders.map(reminder => {
             return (
-              <li key={reminder.id} className="">
-                <div className="">
-                  <div>{reminder.text}</div>
-                  <div><em>{moment(new Date(reminder.dueDate)).fromNow()}</em></div>
+              <li key={reminder.id}>
+                <div className="reminder__list__item">
+                  <div className="reminder__list__item--text">{reminder.text}</div>
+                  <div className="reminder__list__item--date"><em>{moment(new Date(reminder.dueDate)).fromNow()}</em></div>
                 </div>
                 <div
-                  className=""
+                  className="reminder__list__item--delete"
                   onClick={() => this.deleteReminder(reminder.id)}
                 >
                   &#x2715;
@@ -55,14 +55,15 @@ class App extends Component {
         <div className="reminder__header">
           Reminder & Event
         </div>
-        <div className="">
-          <div className="">
+        <div className="reminder__form">
+          <div className="reminder__form__item">
             <input
-              className=""
+              className="reminder__form__item--input"
               placeholder="I have to..."
               onChange={event => this.setState({text: event.target.value})}
             />
             <input
+              className="reminder__form__item--input-date"
               className=""
               type="datetime-local"
               onChange={event => this.setState({dueDate: event.target.value})}
@@ -70,19 +71,19 @@ class App extends Component {
           </div>
           <button
             type="button"
-            className=""
+            className="reminder__form__item--btn"
             onClick={() => this.addReminder()}
           >
             Add Reminder
           </button>
         </div>
         { this.renderReminders() }
-        <div
-          className=""
+        <button
+          className="reminder__form__item--btn-clear"
           onClick={() => this.props.clearReminders()}
         >
           Clear Reminders
-        </div>
+        </button>
       </div>
      </div>
     )
